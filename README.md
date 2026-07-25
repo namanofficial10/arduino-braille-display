@@ -1,57 +1,12 @@
-# Single-Cell Refreshable Braille Prototype
+# Arduino Braille Character TXT Archive
 
-This repository preserves the Arduino control programs created for a **single-cell refreshable Braille hardware prototype** developed as part of a solution presented at the **Smart India Hackathon 2022 Finals**.
+This repository preserves the original character-specific Arduino control programs created for a **single-cell refreshable Braille hardware prototype** developed during the **Smart India Hackathon 2022 Finals**.
 
-## Project Context
+## Repository Purpose
 
-The primary SIH problem statement focused on creating software to convert PDF documents into an accessible EPUB format for visually impaired users.
+The files in this repository represent an early version of the Arduino logic used to generate individual Braille characters through a mechanically actuated prototype.
 
-Alongside the software solution, our team also developed a hardware prototype that could display Braille characters sequentially using:
-
-- Arduino-based control
-- C/C++ character programs
-- Python-based sequencing
-- Mechanical gears and actuators
-- Custom 3D-printed components
-- A single refreshable Braille cell
-
-## How the Prototype Worked
-
-The hardware contained one Braille cell capable of displaying one character at a time.
-
-For example, to display the word:
-
-```text
-NAMAN
-```
-
-The system sequentially displayed:
-
-```text
-N → A → M → A → N
-```
-
-The workflow was:
-
-```text
-Input text
-    ↓
-Python character sequencing
-    ↓
-Character-specific Arduino program
-    ↓
-Mechanical actuation
-    ↓
-Braille character displayed
-    ↓
-Next character
-```
-
-## Repository Contents
-
-The repository currently contains character-specific `.txt` files for letters of the English alphabet.
-
-Each file preserves the Arduino C/C++ control logic used to generate the corresponding Braille character on the prototype.
+Each character was stored separately as a `.txt` file containing Arduino-compatible C/C++ logic.
 
 Example:
 
@@ -63,42 +18,62 @@ C.txt
 Z.txt
 ```
 
-The files remain in their original format to preserve the historical implementation of the prototype.
+These files are retained in their original format as a historical archive of the prototype implementation.
 
-## Technology Used
+## Project Context
 
-- Arduino
-- Embedded C/C++
-- Python
-- Serial communication
-- Mechanical prototyping
-- 3D printing
-- Assistive technology design
+The broader SIH project focused on improving document accessibility for visually impaired users.
+
+The complete solution included:
+
+- PDF-to-EPUB document conversion
+- Python-based text and character sequencing
+- Arduino-based character control
+- A single refreshable Braille cell
+- Mechanical gears and actuators
+- Custom 3D-printed parts
+
+The Braille hardware displayed one character at a time.
+
+For example:
+
+```text
+NAMAN
+```
+
+was rendered sequentially as:
+
+```text
+N → A → M → A → N
+```
 
 ## Project Status
 
-This is an archived educational prototype from 2022.
+This repository is an archived historical component of the original prototype.
 
-The repository is maintained primarily for:
+The code may require modification before use with current Arduino boards, libraries, operating systems or hardware configurations.
 
-- Portfolio documentation
-- Historical reference
-- Demonstrating hardware-software integration
-- Showcasing assistive technology experimentation
+A newer C++ version of the character-control programs is maintained separately in:
 
-The code may require modification before being used with modern Arduino boards, libraries, operating systems or hardware configurations.
+https://github.com/namanofficial10/braille-characters-cpp
+
+## Related Project
+
+The complete SIH project overview and Python orchestration component are documented in:
+
+https://github.com/namanofficial10/sih-braille-accessibility-system
 
 ## Important Note
 
-This repository contains only the character-control programs preserved from the original prototype. The complete PDF-to-EPUB software, Python orchestration layer, hardware design files and 3D models are not currently included.
+This repository does not include:
 
-This prototype was created as part of a team effort. The repository represents the Arduino character-control component associated with the project and does not imply individual ownership of every software, mechanical or hardware component.
+- The Python orchestration layer
+- PDF-to-EPUB conversion software
+- 3D models
+- Mechanical design files
+- Complete hardware schematics
 
-## Responsible Use
-
-This project is intended for educational, research and assistive-technology experimentation.
-
-It should not be treated as a production-ready refreshable Braille display or a certified accessibility device.
+The prototype was created as part of a team effort and this repository represents only one preserved technical component.
 
 ## Author
 
@@ -106,7 +81,3 @@ It should not be treated as a production-ready refreshable Braille display or a 
 
 - GitHub: https://github.com/namanofficial10
 - Portfolio: https://namanofficial10.github.io/
-
-## Acknowledgement
-
-Developed as part of a team solution presented at the **Smart India Hackathon 2022 Finals**.
